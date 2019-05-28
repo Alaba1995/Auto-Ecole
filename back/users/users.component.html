@@ -1,0 +1,26 @@
+
+<input type="text" (keyup)="search($event.target.value)">
+<br>
+<table class="table" style="width : 70%">
+  <tr>
+    <th>
+     <a (click)="sort()"> Nom </a>
+    </th>
+    <th>
+      Email
+    </th>
+    <th>
+      Actions
+    </th>
+  </tr>
+  <tr *ngFor="let user of users">
+    <td>{{user.name}}</td>
+    <td>{{user.email}}</td>
+    <td><button class="btn btn-warning">Editer</button>
+      <button class="btn btn-danger">Supprimer</button>
+    </td>
+  </tr>
+
+
+
+</table>
